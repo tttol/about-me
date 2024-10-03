@@ -1,6 +1,5 @@
 import * as packageJson from "@/../package.json";
 import React from "react";
-import "server-only";
 
 const Version: React.FC = () => {
   return (
