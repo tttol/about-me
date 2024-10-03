@@ -6,7 +6,7 @@ import qiita from "../img/qiita-icon.png";
 const AboutMe: React.FC = () => {
   return (
     <section className="mx-auto">
-      <div className="text-5xl text-center p-5">About Me</div>
+      <div className="text-7xl text-center p-5">About Me</div>
       <div className="text-center">
         <Image
           className="rounded-full mx-auto mb-2"
@@ -78,6 +78,7 @@ const AboutMe: React.FC = () => {
           <a
             href="https://aws.amazon.com/jp/developer/community/community-builders/community-builders-directory/?cb-cards.sort-by=item.additionalFields.cbName&cb-cards.sort-order=asc&awsf.builder-category=*all&awsf.location=*all&awsf.year=*all&cb-cards.q=toru%2Btakahashi&cb-cards.q_operator=AND"
             target="_blank"
+            className="hover:opacity-50"
           >
             AWS Community Builder
             <br/>
