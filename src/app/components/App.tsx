@@ -1,14 +1,21 @@
 "use client";
-import React from "react";
-import { MODE } from "../hooks/context/ModeContext";
+import React, { useContext, useState } from "react";
+import { ModeContext, ModeEnum } from "../hooks/context/ModeContext";
+import Inner from "./Inner";
 
 const App: React.FC = () => {
-  console.log(MODE.DARK);
+  const [mode, setMode] = useState(useContext(ModeContext));
+  const switchMode = () => {
+    setMode(mode === ModeEnum.LIGHT ? ModeEnum.DARK : ModeEnum.LIGHT);
+  }
   return (
     <>
-      <h2>Hello App</h2>
+      <ModeContext.Provider value={mode}>
+        <h2>Hello App</h2>
+        <button onClick={switchMode}>SWITCH</button>
+        <Inner />
+      </ModeContext.Provider>
     </>
   );
 };
-
 export default App;
