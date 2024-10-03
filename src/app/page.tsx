@@ -6,8 +6,8 @@ import Version from "./components/Version";
 const Home: React.FC = () => {
   return (
     <>
-      <Version />
       <App />
+      <Version />
     </>
   );
 };
