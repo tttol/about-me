@@ -1,3 +1,8 @@
-export default function Home() {
-  return <h2>Hello About Me</h2>;
-}
+import React from "react";
+import App from "./components/App";
+
+const Home: React.FC = () => {
+  return <App />;
+};
+
+export default Home;
