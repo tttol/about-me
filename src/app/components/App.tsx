@@ -9,14 +9,16 @@ const App: React.FC = () => {
   const [mode, setMode] = useState(useContext(ModeContext));
   const switchMode = () => {
     setMode(mode === ModeEnum.LIGHT ? ModeEnum.DARK : ModeEnum.LIGHT);
-  }
+  };
   return (
     <>
       <ModeContext.Provider value={mode}>
+        <main className={mode === ModeEnum.DARK ? "dark" : ""}>
+          <AboutMe />
+          <Inner />
+          <Version />
+        </main>
         <button onClick={switchMode}>SWITCH</button>
-        <AboutMe />
-        <Inner />
-        <Version />
       </ModeContext.Provider>
     </>
   );

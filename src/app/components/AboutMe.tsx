@@ -5,8 +5,8 @@ import qiita from "../img/qiita-icon.png";
 
 const AboutMe: React.FC = () => {
   return (
-    <section className="mx-auto">
-      <div className="text-7xl text-center p-5">About Me</div>
+    <section className="mx-auto bg-gradient-to-b dark:to-purple-900 dark:from-black dark:text-slate-100 pb-5">
+      <div className="text-7xl text-center p-5 font-bold">About Me</div>
       <div className="text-center">
         <Image
           className="rounded-full mx-auto mb-2"
@@ -98,6 +98,7 @@ const AboutMe: React.FC = () => {
               width="50"
               height="50"
               viewBox="0 0 50 50"
+              stroke="white"
             >
               <path d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z"></path>
             </svg>
@@ -114,6 +115,7 @@ const AboutMe: React.FC = () => {
               width="50"
               height="50"
               viewBox="0 0 32 32"
+              stroke="white"
             >
               <path d="M 8 8 C 5.243 8 3 10.243 3 13 C 3 15.757 5.243 18 8 18 L 14 18 C 14.551 18 15 18.448 15 19 C 15 19.552 14.551 20 14 20 L 5 20 C 3.896 20 3 20.896 3 22 C 3 23.104 3.896 24 5 24 L 14 24 C 16.757 24 19 21.757 19 19 C 19 16.243 16.757 14 14 14 L 8 14 C 7.449 14 7 13.552 7 13 C 7 12.448 7.449 12 8 12 L 15 12 C 16.104 12 17 11.104 17 10 C 17 8.896 16.104 8 15 8 L 8 8 z M 18.445312 8 C 18.789313 8.59 19 9.268 19 10 C 19 10.734 18.783453 11.409 18.439453 12 L 24 12 C 24.552 12 25 12.448 25 13 L 25 19 C 25 19.552 24.552 20 24 20 L 20.919922 20 C 20.695922 21.556 19.963672 22.949 18.888672 24 L 25 24 C 27.209 24 29 22.209 29 20 L 29 12 C 29 9.791 27.209 8 25 8 L 18.445312 8 z"></path>
             </svg>

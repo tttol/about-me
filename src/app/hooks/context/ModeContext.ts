@@ -7,9 +7,7 @@ export enum ModeEnum {
 
 const getPreferredColor = () => {
   // https://developer.mozilla.org/ja/docs/Web/API/Window/matchMedia
-  const isLight =
-    // window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: light)").matches;
+  const isLight = window.matchMedia("(prefers-color-scheme: light)").matches;
 
   if (isLight) {
     return ModeEnum.LIGHT;
