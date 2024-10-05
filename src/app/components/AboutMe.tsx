@@ -6,7 +6,7 @@ import qiita from "../img/qiita-icon.png";
 const AboutMe: React.FC = () => {
   return (
     <section className="mx-auto pb-5">
-      <div className="text-7xl text-center p-5 font-bold">About Me</div>
+      <div className="text-7xl text-center p-5 pt-0 font-bold">About Me</div>
       <div className="text-center">
         <Image
           className="rounded-full mx-auto mb-2"

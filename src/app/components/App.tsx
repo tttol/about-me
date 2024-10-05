@@ -15,20 +15,29 @@ const App: React.FC = () => {
     <>
       <ModeContext.Provider value={mode}>
         <main className={mode === ModeEnum.DARK ? "dark" : ""}>
-          <div className="bg-gradient-to-b dark:to-purple-900 dark:from-black dark:text-slate-100">
-            <header className="flex">
-              <div>Toru Takahashi</div>
-              <div className="cursor-pointer" onClick={switchMode}>
-                {mode === ModeEnum.DARK && <Sun />}
-                {mode === ModeEnum.LIGHT && <Moon />}
+          <div className="bg-gradient-to-b to-white from-blue-300 text-slate-800 dark:to-blue-700 dark:from-black dark:text-slate-200">
+            <header className="flex justify-end p-2">
+              <div
+                className={`cursor-pointer rounded-full p-2 bg-black text-white dark:bg-slate-500 mr-1 ${
+                  mode === ModeEnum.DARK ? "opacity-50" : ""
+                }`}
+                onClick={switchMode}
+              >
+                <Sun />
+              </div>
+              <div
+                className={`cursor-pointer rounded-full p-2 bg-black text-white dark:bg-slate-500 ${
+                  mode === ModeEnum.LIGHT ? "opacity-50" : ""
+                }`}
+                onClick={switchMode}
+              >
+                <Moon />
               </div>
             </header>
             <AboutMe />
           </div>
-          <p>Mode is {mode}</p>
           <Version />
         </main>
-        {/* <button onClick={switchMode}>SWITCH</button> */}
       </ModeContext.Provider>
     </>
   );
