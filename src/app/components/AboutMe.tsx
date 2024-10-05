@@ -5,7 +5,7 @@ import qiita from "../img/qiita-icon.png";
 
 const AboutMe: React.FC = () => {
   return (
-    <section className="mx-auto bg-gradient-to-b dark:to-purple-900 dark:from-black dark:text-slate-100 pb-5">
+    <section className="mx-auto pb-5">
       <div className="text-7xl text-center p-5 font-bold">About Me</div>
       <div className="text-center">
         <Image
