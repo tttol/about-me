@@ -11,6 +11,7 @@ const AboutMe: React.FC = () => {
         <Image
           className="rounded-full mx-auto mb-2"
           src={me}
+          // src="/src/app/img/me-square.png"
           alt="Toru Takahashi"
           width={200}
           height={200}
@@ -168,6 +169,7 @@ const AboutMe: React.FC = () => {
             className="hover:opacity-50"
           >
             <Image src={qiita} width="50" height="50" alt="Qiita"></Image>
+            {/* <Image src="/src/app/img/qiita-icon.png" width="50" height="50" alt="Qiita"></Image> */}
           </a>
         </div>
       </div>
