@@ -1,13 +1,7 @@
-import React from "react";
-import "server-only";
 import App from "./components/App";
 
-const Home: React.FC = () => {
+export default function Home() {
   return (
-    <>
       <App />
-    </>
   );
 };
-
-export default Home;
