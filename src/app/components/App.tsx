@@ -14,8 +14,12 @@ const App: React.FC = () => {
   return (
     <>
       <ModeContext.Provider value={mode}>
-        <main className={mode === ModeEnum.DARK ? "dark" : ""}>
-          <div className="bg-gradient-to-b to-white from-blue-300 text-slate-800 dark:to-blue-700 dark:from-black dark:text-slate-200">
+        <main
+          className={`text-slate-800 dark:text-slate-200 ${
+            mode === ModeEnum.DARK ? "dark" : ""
+          }`}
+        >
+          <div className="bg-gradient-to-b to-white from-blue-300 dark:to-blue-700 dark:from-black h-screen">
             <header className="flex justify-end p-2">
               <div
                 className={`cursor-pointer rounded-full p-2 bg-black text-white dark:bg-slate-500 mr-1 ${
@@ -35,8 +39,8 @@ const App: React.FC = () => {
               </div>
             </header>
             <AboutMe />
+            <Version />
           </div>
-          <Version />
         </main>
       </ModeContext.Provider>
     </>

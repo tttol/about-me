@@ -6,3 +6,4 @@ This is my portfolio web site. Go to https://~~~~~.
 - レスポンシブデザイン
 - NFTリンクを貼る
 - Next.js SSGで高速化する
+- OGP画像をちゃんとする
