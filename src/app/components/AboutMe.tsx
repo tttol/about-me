@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { GitHub, Qiita, SpeakerDeck, X } from "../icons";
+import { GitHub, LinkedIn, Qiita, SpeakerDeck, X } from "../icons";
 import me from "../img/me-square.png";
 
 const AboutMe: React.FC = () => {
@@ -82,7 +82,7 @@ const AboutMe: React.FC = () => {
             className="hover:opacity-50"
           >
             AWS Community Builder
-            <br/>
+            <br />
             <span className="text-sm">Category: Front-End Web and Mobile</span>
           </a>
         </p>
@@ -114,6 +114,13 @@ const AboutMe: React.FC = () => {
             className="hover:opacity-50"
           >
             <Qiita />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/toru-takahashi-23b26729a/"
+            target="_blank"
+            className="hover:opacity-50"
+          >
+            <LinkedIn />
           </a>
         </div>
       </div>
