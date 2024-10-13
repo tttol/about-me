@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { GitHub, LinkedIn, Qiita, SpeakerDeck, X } from "../icons";
+import { GitHub, LinkedIn, Note, Qiita, SpeakerDeck, X } from "../icons";
 import me from "../img/me-square.png";
 
 const AboutMe: React.FC = () => {
@@ -86,13 +86,36 @@ const AboutMe: React.FC = () => {
             <span className="text-sm">Category: Front-End Web and Mobile</span>
           </a>
         </p>
-        <div className="flex justify-center items-center gap-x-4">
+        <div className="flex justify-center items-center gap-x-4 mb-3">
           <a
             href="https://x.com/tttol777"
             target="_blank"
             className="hover:opacity-50"
           >
             <X />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/toru-takahashi-23b26729a/"
+            target="_blank"
+            className="hover:opacity-50"
+          >
+            <LinkedIn />
+          </a>
+          <a
+            href="https://github.com/tttol"
+            target="_blank"
+            className="hover:opacity-50"
+          >
+            <GitHub />
+          </a>
+        </div>
+        <div className="flex justify-center items-center gap-x-4">
+          <a
+            href="https://qiita.com/tttol777"
+            target="_blank"
+            className="hover:opacity-50"
+          >
+            <Qiita />
           </a>
           <a
             href="https://speakerdeck.com/tttol"
@@ -102,26 +125,13 @@ const AboutMe: React.FC = () => {
             <SpeakerDeck />
           </a>
           <a
-            href="https://github.com/tttol"
+            href="https://note.com/tttol777/"
             target="_blank"
             className="hover:opacity-50"
           >
-            <GitHub />
+            <Note />
           </a>
-          <a
-            href="https://qiita.com/tttol777"
-            target="_blank"
-            className="hover:opacity-50"
-          >
-            <Qiita />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/toru-takahashi-23b26729a/"
-            target="_blank"
-            className="hover:opacity-50"
-          >
-            <LinkedIn />
-          </a>
+
         </div>
       </div>
     </section>
