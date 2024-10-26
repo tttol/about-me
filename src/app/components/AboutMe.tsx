@@ -11,7 +11,6 @@ const AboutMe: React.FC = () => {
         <Image
           className="rounded-full mx-auto mb-2"
           src={me}
-          // src="/src/app/img/me-square.png"
           alt="Toru Takahashi"
           width={200}
           height={200}
