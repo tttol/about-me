@@ -6,13 +6,11 @@ export default function Header() {
     document.querySelector("main")?.classList.remove("dark");
     document.querySelector("#sun")?.classList.remove("opacity-50");
     document.querySelector("#moon")?.classList.add("opacity-50");
-    console.log("light");
   };
   const switchDark = () => {
     document.querySelector("main")?.classList.add("dark");
     document.querySelector("#moon")?.classList.remove("opacity-50");
     document.querySelector("#sun")?.classList.add("opacity-50");
-    console.log("dark");
   };
   return (
     <header className="flex justify-end p-2">
