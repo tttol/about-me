@@ -6,7 +6,7 @@ import Version from "./components/Version";
 
 export default function Home() {
   return (
-      <main className="text-slate-800 dark:text-slate-200">
+    <main className="text-slate-800 dark:text-slate-200">
       <div className="bg-gradient-to-b to-white from-blue-300 dark:to-blue-700 dark:from-black h-screen">
         <Header />
         <AboutMe />
@@ -15,4 +15,4 @@ export default function Home() {
       </div>
     </main>
   );
-};
+}
