@@ -1,14 +1,10 @@
 "use server";
 
-import type { Schema } from "@/../amplify/data/resource";
-import outputs from "@/../amplify_outputs.json";
-import { Amplify } from "aws-amplify";
-import { generateClient } from "aws-amplify/data";
 import { CreateItemException } from "../exception/exceptions";
+import { generateAmplifyClient } from "./client";
 import { validateForm } from "./validation";
 
-Amplify.configure(outputs);
-const client = generateClient<Schema>();
+const client = generateAmplifyClient();
 const MEET_TOKEN = process.env.MEET_TOKEN;
 
 export async function writeItem(formData: FormData, token: string | null) {
