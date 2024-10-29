@@ -1,5 +1,6 @@
 import outputs from "@/../amplify_outputs.json";
 import { Amplify } from "aws-amplify";
+import { Suspense } from "react";
 import "server-only";
 import AboutMe from "./components/AboutMe";
 import Header from "./components/Header";
@@ -14,7 +15,9 @@ export default function Home() {
         <Version />
         <Header />
         <AboutMe />
-        <Meeting />
+        <Suspense> 
+          <Meeting />
+        </Suspense>
       </div>
     </main>
   );
