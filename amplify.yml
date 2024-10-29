@@ -12,7 +12,7 @@ frontend:
         - echo "MEET_TOKEN=$MEET_TOKEN" >> .env
         - "npm run build"
   artifacts:
-    baseDirectory: out
+    baseDirectory: .next
     files:
       - "**/*"
   cache:
