@@ -9,6 +9,7 @@ frontend:
   phases:
     build:
       commands:
+        - echo "$MEET_TOKEN"
         - echo "$MEET_TOKEN" >> .env
         - "npm run build"
   artifacts:
