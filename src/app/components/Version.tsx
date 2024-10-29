@@ -4,7 +4,7 @@ import React from "react";
 const Version: React.FC = () => {
   return (
     <div>
-      <p className="text-right">version: {packageJson.version}</p>
+      <p className="text-right text-slate-500">version: {packageJson.version}</p>
     </div>
   );
 };
