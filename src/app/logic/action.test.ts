@@ -26,15 +26,16 @@ describe("writeItem", () => {
   it("正常系", async () => {
     const formData = new FormData();
     formData.append("name", "Valid Name");
-
-    await expect(writeItem(formData, MEET_TOKEN)).resolves.not.toThrow();
+    
+    const actual = await writeItem(formData, MEET_TOKEN);
+    expect(actual).toEqual("Valid Name");
   });
 
   it("トークンが無効な場合に例外が発生すること", async () => {
     const formData = new FormData();
     formData.append("name", "Valid Name");
 
-    await expect(writeItem(formData, "invalid-token")).rejects.toThrow(
+    expect(writeItem(formData, "invalid-token")).rejects.toThrow(
       CreateItemException
     );
   });
@@ -43,7 +44,7 @@ describe("writeItem", () => {
     const formData = new FormData();
     formData.append("name", "");
 
-    await expect(writeItem(formData, MEET_TOKEN)).rejects.toThrow(
+    expect(writeItem(formData, MEET_TOKEN)).rejects.toThrow(
       CreateItemException
     );
   });

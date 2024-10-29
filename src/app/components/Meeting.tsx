@@ -1,4 +1,5 @@
 "use client";
+import "@aws-amplify/ui-react/styles.css";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { writeItem } from "../logic/action";
@@ -16,14 +17,14 @@ const Meeting: React.FC = () => {
   const meet = search.get("meet");
 
   const sendAction = async (event: React.FormEvent) => {
-    
     try {
       event.preventDefault();
       const form = event.target as HTMLFormElement;
       const formData = new FormData(form); // FormDataを生成
-      
+
       document.querySelector("#submitButton")?.setAttribute("disabled", "");
-      await writeItem(formData, meet);
+      const name = await writeItem(formData, meet);
+      alert(`${name} さんを出会った記録に登録しました`)
     } catch (e: unknown) {
       console.error("Failed to write item.", e);
       alert("出会った記録の書き込みに失敗しました");
@@ -49,7 +50,8 @@ const Meeting: React.FC = () => {
           <div className="bg-slate-400 p-4 rounded-lg text-white w-3/4">
             <form onSubmit={sendAction}>
               <p>
-                Toru Takahashiと今日出会ったことを記録します<br />
+                Toru Takahashiと今日出会ったことを記録します
+                <br />
               </p>
               <input
                 type="text"
@@ -57,7 +59,9 @@ const Meeting: React.FC = () => {
                 placeholder="Enter your name"
                 className="border border-gray-300 rounded-lg px-3 py-2 w-full text-slate-800 bg-white"
               />
-              <div className="text-slate-300 text-sm mb-2">お名前を入力してください。ニックネーム・ハンドルネーム等も可。</div>
+              <div className="text-slate-300 text-sm mb-2">
+                お名前を入力してください。ニックネーム・ハンドルネーム等も可。
+              </div>
               <div className="flex justify-end">
                 <button
                   onClick={closeModal}

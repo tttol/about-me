@@ -14,7 +14,10 @@ export async function writeItem(formData: FormData, token: string | null) {
   }
   validateForm(formData);
 
-  createItem(formData.get("name") as string);
+  const name: string = formData.get("name") as string;
+  createItem(name);
+  
+  return name;
 }
 
 const createItem = async (name: string) => {
