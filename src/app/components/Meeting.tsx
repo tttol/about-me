@@ -1,5 +1,4 @@
 "use client";
-import "@aws-amplify/ui-react/styles.css";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { writeItem } from "../logic/action";
