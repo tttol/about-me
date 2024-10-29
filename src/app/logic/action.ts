@@ -9,7 +9,7 @@ const MEET_TOKEN = process.env.MEET_TOKEN;
 
 export async function writeItem(formData: FormData, token: string | null) {
   if (token !== MEET_TOKEN) {
-    console.error("Token error.", token);
+    console.error(`Token error. token=${token} MEET_TOKEN=${MEET_TOKEN}`);
     throw new CreateItemException("Failed to token validation.");
   }
   validateForm(formData);
