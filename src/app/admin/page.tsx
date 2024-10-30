@@ -30,15 +30,26 @@ export default function Admin() {
 
   return (
     <Authenticator>
-      <main>
-        <p>Hello Admin</p>
+      <main className="bg-gradient-to-b to-white from-purple-400 text-slate-800 text-center">
+        <p className="font-bold text-4xl mb-3">Meeting Log</p>
         <div>
-          {meetingLog.map((log) => (
-            <div key={log.id} className="flex">
-              <div>Name: {log.name}</div>
-              <div>Date: {dateFormatter.format(new Date(log.createdAt))}</div>
-            </div>
-          ))}
+          {meetingLog
+            .sort((a, b) => {
+              // ORDER BY createdAt DESC
+              const aCreatedAt = a.createdAt
+                ? new Date(a.createdAt).getTime()
+                : 0;
+              const bCreatedAt = b.createdAt
+                ? new Date(b.createdAt).getTime()
+                : 0;
+              return bCreatedAt - aCreatedAt;
+            })
+            .map((log) => (
+              <div key={log.id} className="flex justify-center">
+                <div>Name: {log.name}</div>
+                <div>Date: {dateFormatter.format(new Date(log.createdAt))}</div>
+              </div>
+            ))}
         </div>
       </main>
     </Authenticator>

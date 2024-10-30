@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 import { CreateItemException } from "../exception/exceptions";
-import { writeItem } from "./action";
+import { writeMeetingLog } from "./action";
 
 vi.mock("./client.ts", () => ({
   generateAmplifyClient: vi.fn(() => ({
@@ -27,7 +27,7 @@ describe("writeItem", () => {
     const formData = new FormData();
     formData.append("name", "Valid Name");
     
-    const actual = await writeItem(formData, MEET_TOKEN);
+    const actual = await writeMeetingLog(formData, MEET_TOKEN);
     expect(actual).toEqual("Valid Name");
   });
 
@@ -35,7 +35,7 @@ describe("writeItem", () => {
     const formData = new FormData();
     formData.append("name", "Valid Name");
 
-    expect(writeItem(formData, "invalid-token")).rejects.toThrow(
+    expect(writeMeetingLog(formData, "invalid-token")).rejects.toThrow(
       CreateItemException
     );
   });
@@ -44,7 +44,7 @@ describe("writeItem", () => {
     const formData = new FormData();
     formData.append("name", "");
 
-    expect(writeItem(formData, MEET_TOKEN)).rejects.toThrow(
+    expect(writeMeetingLog(formData, MEET_TOKEN)).rejects.toThrow(
       CreateItemException
     );
   });

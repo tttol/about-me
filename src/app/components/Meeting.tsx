@@ -1,7 +1,7 @@
 "use client";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
-import { writeItem } from "../lib/action";
+import { writeMeetingLog } from "../lib/action";
 
 const Meeting: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,7 +22,7 @@ const Meeting: React.FC = () => {
       const formData = new FormData(form); // FormDataを生成
 
       document.querySelector("#submitButton")?.setAttribute("disabled", "");
-      const name = await writeItem(formData, meet);
+      const name = await writeMeetingLog(formData, meet);
       alert(`${name} さんを出会った記録に登録しました`)
     } catch (e: unknown) {
       console.error("Failed to write item.", e);
