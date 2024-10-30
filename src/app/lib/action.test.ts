@@ -13,7 +13,7 @@ vi.mock("./client.ts", () => ({
 }));
 
 vi.mock("./action.ts", async (importOriginal) => {
-  const mod = await importOriginal<typeof import("./action.ts")>();
+  const mod = await importOriginal<typeof import("./action")>();
   return {
     ...mod,
     createItem: vi.fn().mockResolvedValue(0),

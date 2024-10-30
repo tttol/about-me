@@ -1,7 +1,7 @@
 "use client";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
-import { writeItem } from "../logic/action";
+import { writeItem } from "../lib/action";
 
 const Meeting: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

@@ -16,7 +16,7 @@ export async function writeItem(formData: FormData, token: string | null) {
 
   const name: string = formData.get("name") as string;
   createItem(name);
-  
+
   return name;
 }
 
@@ -25,3 +25,11 @@ const createItem = async (name: string) => {
     name: name,
   });
 };
+
+export async function fetchMeetingLog() {
+  const { data: items, errors } = await client.models.Meeting.list();
+  if (errors) {
+    throw new Error(`Failed to fetch meeting log. ${JSON.stringify(errors)}`);
+  }
+  return items;
+}
