@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8">
   <diagram name="Page-1" id="t7YT83FBTzFKjxZDYn0S">
-    <mxGraphModel dx="1158" dy="845" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1640" dy="1197" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -42,9 +42,6 @@
         </mxCell>
         <mxCell id="9ioTS7lIuop4eFTHkUZy-8" value="&lt;div style=&quot;font-size: 18px;&quot;&gt;&lt;br style=&quot;font-size: 18px;&quot;&gt;&lt;/div&gt;Admin&lt;div style=&quot;font-size: 18px;&quot;&gt;&lt;/div&gt;" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#e51400;strokeColor=#B20000;fontSize=18;fontColor=#ffffff;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="50" y="833" width="70" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="9ioTS7lIuop4eFTHkUZy-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=18;" edge="1" parent="1" source="9ioTS7lIuop4eFTHkUZy-2" target="9ioTS7lIuop4eFTHkUZy-3">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="9ioTS7lIuop4eFTHkUZy-19" value="AWS Amplify Hosting" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#DD344C;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=18;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.amplify;" vertex="1" parent="1">
           <mxGeometry x="758" y="508" width="60" height="60" as="geometry" />
